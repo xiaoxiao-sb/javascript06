@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+			 * 1.弹出一个prompt      prompt是一个带返回值的函数,可以将输入的文本
+			 * 						从事函数中返回出去
+			 * 2.在输入框中输入星座
+			 * 3.单击确定,获取输入框中的星座字符串和程序中的比较
+			 * 4.用alert弹出对应的性格特点
+			 */
+			
+			var str = prompt('请输入您的星座:');
+//			var num = alert('啦啦啦');
+//			console.log(num);
+//			console.log(str);
+			//去掉用户输入的两端空格
+			str = str.trim();
+			if(str == '射手座'){
+				alert('美丽');
+			}else if(str == '狮子座'){
+				alert('七月的尾巴');
+			}else if(str == '摩羯座'){
+				alert('也叫山羊座');
+			}else{
+				alert('您输入的星座有误!!!');
+			}
+		</script>
+	</body>
+</html>

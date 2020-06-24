@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			/*
+			 * 另一种访问对象属性和方法:
+			 * 对象["属性名"]
+			 */
+			var t = {
+				name: '林俊杰',
+				age: 40,
+				gender: true,
+				sing: function() {
+					console.log('第几个100天');
+				}
+			};
+			console.log(t.name);
+			//console.log(t.dsafasdfdasfdasfds);
+			t["name"] = '林黛玉';
+			console.log(t["name"]);
+			t.sing();
+			t["sing"]();
+		</script>
+	</body>
+
+</html>

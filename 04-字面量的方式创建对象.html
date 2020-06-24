@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			//var obj = new Object();
+			/*
+			 *  字面量方式:
+			 */
+			var t = {
+				name: '林俊杰',
+				age: 40,
+				gender: true,
+				sing: function() {
+					console.log('第几个100天');
+				}
+			};
+			//			t.name = '林俊杰';
+			console.log(t);
+
+			/**
+			 * 返回一个数组中的和最大值最小值
+			 * @param {一个数组} arr
+			 * @return{sum} 和
+			 * @return{max} 最大值
+			 * @return{min} 最小值
+			 */
+			function getSumAndMaxAndMinByArray(arr) {
+				var sum = 0;
+				var max = arr[0];
+				var min = arr[0];
+				for(var i = 0; i < arr.length; i++) {
+					//和
+					sum += arr[i];
+					//最大值
+					if(max < arr[i]) {
+						max = arr[i];
+					}
+					//最小值
+					if(min > arr[i]) {
+						min = arr[i];
+					}
+				}
+				//将三个值存储到数组中,返回
+				//				var t = [sum, max, min];//将三个值存储到数组中,返回
+
+				//
+				//第一种: 将多个值保存在对象的属性中,从函数中返回一个对象			
+				//				var t = new Object();
+				////				t.name = '周杰伦';
+				////				t.age = 41;
+				////				t.gender = true;
+				//				t.sum = sum;
+				//				t.max = max;
+				//				t.min = min;
+				
+				//第二种:字面量方式
+				var t = {
+					sum: sum,
+					max: max,
+					min: min
+				};
+				//				t.name = '周杰伦';
+				//				t.age = 41;
+				//				t.gender = true;
+
+				return t;
+
+			}
+			var obj = getSumAndMaxAndMinByArray([1, 2, 3, 4, 5]);
+			console.log(obj.sum);
+			console.log(obj.max);
+			console.log(obj.min);
+		</script>
+	</body>
+
+</html>

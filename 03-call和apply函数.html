@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			/*
+			 * call和apply函数可以改变this的指向
+			 * 函数.call(对象,函数的参数1,函数的参数2,函数的参数3,.........)
+			 * 函数.apply(对象,[函数的参数1,函数的参数2,函数的参数3,...])
+			 */
+
+			function Person(name) {
+				this.name = name;
+				this.eat = function() {
+					console.log(this);
+				}
+			}
+			var jay = new Person('周杰伦');
+			jay.eat.call(window);
+			
+			function sum(a,b,c){
+				console.log(a+b+c);
+				console.log(this);
+			}
+			sum.call(jay,1,2,3);
+			sum.apply(jay,[1,2,3]);
+		</script>
+	</body>
+
+</html>

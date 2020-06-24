@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			console.log(Math.PI);//圆周率
+			console.log(Math.abs(-5));//绝对值
+			console.log(Math.ceil(4.01));//向上取整
+			console.log(Math.floor(5.99));//向下取整,和parseInt一样
+			console.log(Math.round(4.51));//四舍五入
+			console.log(Math.max(1,2,5,4,8,100));//比较最大值
+			console.log(Math.min(1,2,5,4,8,100));//比较最小值
+			console.log(Math.random());//生成0-1之间的随机小数,  大于0小于1
+			console.log(Math.random()*5);//生成0-5之间的随机小数,  大于0小于5
+			console.log(parseInt(Math.random()*5));//生成0-5之间的随机整数, 0,1,2,3,4
+			/*
+			 * 模拟Math对象的max方法
+			 */
+			function myMax(){
+				/*
+				 * arguments对象: 可以获取函数中的实际参数,一数组的形式存储到arguments中
+				 */
+				var max = arguments[0];
+				for (var i = 0; i < arguments.length; i++) {
+					if(max < arguments[i]){
+						max = arguments[i];
+					}
+				}
+				return max;
+			}
+			//console.log(myMax(1,8,5,67,53,21,121));
+			var num = parseInt(Math.random()*8)
+			var arr = ['金秋','翟乐乐','闫俊杰','郭宇飞','吴琪琪','李源','袁咪','梁萧'];
+			alert(arr[num]);
+		</script>
+	</body>
+</html>

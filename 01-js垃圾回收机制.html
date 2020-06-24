@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+			 * js垃圾回收机制: 当内存中的对象在长时间没有被指向的时候,浏览器会自动清理这些,
+			 * 为了释放内存.
+			 */
+			var obj01 = new Object();
+			obj01.name = '周星驰';
+			var obj02 = new Object();
+			obj02.name = '吴孟达';
+//			var obj03 = obj02;
+			obj02 =  new Object();
+			obj02.name = '张柏芝';
+			
+			obj01 =null;
+			
+			
+		</script>
+	</body>
+</html>

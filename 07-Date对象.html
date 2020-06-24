@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			/*
+			 * Date时间对象,获取的是计算机中的时间
+			 * 毫秒的作用:通常在设计订单号的时候,为了让订单号唯一,不重复,会用时间精确到毫秒再加上一组
+			 * 很长的随机数,所以此时要用到毫秒
+			 */
+			var myDate = new Date();
+			console.log(myDate);
+			console.log(myDate.getFullYear()); //年
+			console.log(myDate.getMonth() + 1); //月  取值 0-11
+			console.log(myDate.getDate()); //日
+			console.log(myDate.getHours()); //小时
+			console.log(myDate.getMinutes()); //分钟
+			console.log(myDate.getSeconds()); //秒
+			console.log(myDate.getDay()); //星期  从0-6 0是周日
+			console.log(myDate.toLocaleDateString()); //本地日期
+			console.log(myDate.toLocaleTimeString()); //本地时间
+			console.log(myDate.valueOf()); //毫秒      1秒 = 1000毫秒
+
+			var num = myDate.getDay();
+			
+			
+			//方案1
+			/**
+			 * 转换大写星期
+			 * @param {Object} num
+			 */
+			function getDaXie(num) {
+				//var num;
+				var str = '';
+				switch(num) {
+					case 1:
+						str = '一';
+						break;
+					case 2:
+						str = '二';
+						break;
+					case 3:
+						str = '三';
+						break;
+					case 4:
+						str = '四';
+						break;
+					case 5:
+						str = '五';
+						break;
+					case 6:
+						str = '六';
+						break;
+					default:
+						str = '日';
+						break;
+				}
+				return str;
+			}
+			
+			//方案2
+			var arr=['日','一','二','三','四','五','六'];
+			
+			//2019年4月8日 星期一 上午 10:47:21 
+			console.log(myDate.getFullYear() + '年' + (myDate.getMonth() + 1) + '月' + myDate.getDate() + '日' + '星期' + arr[num]);
+		
+		</script>
+	</body>
+
+</html>

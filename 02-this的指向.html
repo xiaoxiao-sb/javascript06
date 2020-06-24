@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+			 * this的指向:
+			 * 在构造函数中,this指向的是当前实例对象
+			 * 在普通函数中,this指向的是window
+			 */
+			function Person(name){
+				this.name = name;
+				this.eat = function(){
+					console.log(this);
+				}
+			}
+			var jay = new Person('周杰伦');
+			jay.eat();
+			
+			function sum(){
+				console.log(this);
+			}
+			sum();
+		</script>
+	</body>
+</html>
